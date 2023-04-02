@@ -2,7 +2,7 @@ import io.spinu.pack.Audi;
 import io.spinu.pack.Calcule;
 import io.spinu.pack.Volkswagen;
 import spn.createid.Student;
-
+import java.lang.Math;
 import java.lang.String;
 import java.util.Scanner;
 
@@ -62,16 +62,84 @@ public class Main {
        System.out.println("====================================================================================");
 
         Scanner numeAux = new Scanner(System.in);
-        System.out.println("Va rugam sa introduceti numele dvs: ");
+        System.out.print("Va rugam sa introduceti numele dvs: ");
         String nume =  numeAux.nextLine();
 
         Scanner prenumeAux = new Scanner(System.in);
-        System.out.println("Va rugam sa introduceti prenumele dvs: ");
+        System.out.print("Va rugam sa introduceti prenumele dvs: ");
         String prenume =  prenumeAux.nextLine();
 
 
         Student first = new Student(nume, prenume);
         System.out.println("Felicitari " + first.prenume + " " + first.nume + ", acum esti inscris!");
+
+        System.out.println("====================================================================================");
+        System.out.println("Alegeti o opriune: \n 1) Adunarea! \n 2) Scaderea! \n 3) Inmultirea! \n 4) Impartirea!  \n 5) Minimul dintre 2 numere! \n 6) Maximul dintre 2 numere! ");
+        System.out.println("====================================================================================");
+        Scanner varAux = new Scanner(System.in);
+
+
+        int varAlegere = varAux.nextInt();
+
+        switch (varAlegere) {
+            case 1: {
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int rezultat = x + y;
+                System.out.println("Rezultatul: " + rezultat);
+                break;
+            }
+            case 2: {
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int rezultat = x - y;
+                System.out.println("Rezultatul: " + rezultat);
+                break;
+            }
+            case 3: {
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int rezultat = x * y;
+                System.out.println("Rezultatul: " + rezultat);
+                break;
+            }
+            case 4: {
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int rezultat = x / y;
+                System.out.println("Rezultatul: " + rezultat);
+                break;
+            }
+            case 5:{
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int min = Math.min(x, y);
+                System.out.println(min);
+                break;
+
+            }
+            case 6: {
+                System.out.print("X = ");
+                int x = varAux.nextInt();
+                System.out.print("Y = ");
+                int y = varAux.nextInt();
+                int min = Math.max(x, y);
+                System.out.println(min);
+                break;
+            }
+            default:
+                System.out.println("Verificati introducerea datelor!");
+        }
 
 
 
