@@ -142,6 +142,16 @@ public class Main {
         }
 
 
+        int[][] tablou = new int[][]={{1,2,3},{4,5,6}};
+        for(int i=0;i<tablou.length; i++){
+            for(int j=0;j<tablou[i].length;j++)
+                System.out.println(tablou[i][j] + " ");
+                System.out.println();
+        }
+
+
+
+
 
 
     }
